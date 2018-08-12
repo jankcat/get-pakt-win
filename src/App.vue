@@ -2,25 +2,25 @@
   <div id="app">
     <div>
       <img id="logo" alt="get pakt" src="./assets/logo.png" />
-    <div class="bg">
-      <Scroller msg="PAK YO BAGS!" />
-    </div>
-  </div>
-  <hr />
-  <div>
-    <div class="left">
-    <img alt="people who got pakt:" src="./assets/peepz who got pakt.png" />
-    <Wins />
-    </div>
+      <div class="bg">
+        <Scroller msg="PAK YO BAGS!" />
+      </div>
     </div>
     <hr />
-  <div class="bg">
-    <h3>
-      <img alt="under construction" src="./assets/construction2.gif" />
-      ThiS PagE Is UndeR CoNsTrUcTiOn
-      <img alt="under construction" src="./assets/construction.gif" />
-    </h3>
-  </div>
+    <div>
+      <div class="left">
+        <img alt="people who got pakt:" src="./assets/peepz who got pakt.png" />
+        <Wins />
+      </div>
+    </div>
+    <hr />
+    <div class="bg">
+      <h3>
+        <img alt="under construction" src="./assets/construction2.gif" />
+        ThiS PagE Is UndeR CoNsTrUcTiOn
+        <img alt="under construction" src="./assets/construction.gif" />
+      </h3>
+    </div>
     <hr />
     <div>
       <img alt="the crew" src="./assets/the crew.png" /><br />
