@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>got pakt?</title>
+	<style>
+		body {
+			font-family: 'Times New Roman';
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			color: #000000;
+		}
+	</style>
+  </head>
+  <body>
+    <div>
+		profile<br />
+		<form action="https://us-central1-getpakt-633fa.cloudfunctions.net/win/" method="POST" name="winForm">
+			<input id="user" name="user" value="" />
+			<button type="submit">win</button>
+		</form>
+		<p id="result"></p>
+	</div>
+  </body>
+</html>
