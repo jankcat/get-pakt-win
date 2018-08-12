@@ -20,7 +20,7 @@
         </tr>
         <tr v-for="player in paktd" :key="player.id">
           <td><img v-bind:src="player.avatar"></td>
-          <td><a v-bind:href="player.profile">{{player.name}}</a></td>
+          <td><a v-bind:href="player.profile" target="_blank">{{player.name}}</a></td>
           <td><a v-bind:href="'http://www.google.com/maps/place/'+player.coordinates" target="_blank">{{player.location}}</a></td>
           <td>{{new Date(player.date).toLocaleTimeString("en-us", dateOptions)}}</td>
           <td>69 - 0</td>
