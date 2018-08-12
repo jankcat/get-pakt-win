@@ -25,12 +25,12 @@
     <div>
       <img alt="the crew" src="./assets/the crew.png" /><br />
       <img class="img-pak" alt="suck it" src="./assets/broken.jpg" />&nbsp;
-      <img class="img-pak" alt="get pakt" src="./assets/pakt01.png" /><br />
-      <img class="img-pak" alt="get pakt" src="./assets/pakt02.png" />&nbsp;
-      <img class="img-pak" alt="get pakt" src="./assets/pakt03.png" />&nbsp;
-      <img class="img-pak" alt="get pakt" src="./assets/pakt04.png" />&nbsp;
-      <img class="img-pak" alt="get pakt" src="./assets/pakt05.png" />&nbsp;
-      <img class="img-pak" alt="get pakt" src="./assets/pakt06.png" />&nbsp;
+      <JpgImg image='pakt01' /><br />
+      <JpgImg image='pakt02' />&nbsp;
+      <JpgImg image='pakt03' />&nbsp;
+      <JpgImg image='pakt04' />&nbsp;
+      <JpgImg image='pakt05' />&nbsp;
+      <JpgImg image='pakt06' />&nbsp;
     </div>
     <hr />
     <div class="bg">
@@ -46,12 +46,14 @@
 <script>
 import Wins from './components/Wins.vue';
 import Scroller from './components/Scroller.vue';
+import JpgImg from './components/JpgImg.vue';
 
 export default {
   name: 'app',
   components: {
     Wins,
     Scroller,
+    JpgImg,
   },
 };
 </script>
