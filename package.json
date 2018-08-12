@@ -10,6 +10,7 @@
   "dependencies": {
     "firebase": "^5.3.1",
     "vue": "^2.5.17",
+    "vue-audio-visual": "^1.2.0",
     "vuefire": "^2.0.0-alpha.12"
   },
   "devDependencies": {

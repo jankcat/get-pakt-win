@@ -40,6 +40,7 @@
       <img class="img-small" alt="counter" src="./assets/trophy.gif" />&nbsp;
       <img class="img-small" alt="counter" src="./assets/frontpage.jpg" />
     </div>
+    <hr />
   </div>
 </template>
 

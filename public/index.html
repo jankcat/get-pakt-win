@@ -6,24 +6,33 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>get pakt, fool</title>
-	<style>
-		body {
-			font-family: 'Times New Roman';
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
-			color: #ffffff;
-			background-image: url("dance.gif");
-		}
-		hr {
-			border-width: 2px;
-		}
-		.snowflake__inner:before {
+    <style>
+        body {
+            font-family: 'Times New Roman';
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            color: #ffffff;
+            background-image: url("dance.gif");
+        }
+        hr {
+            border-width: 2px;
+        }
+        .snowflake__inner:before {
             background-image: url('ball-small.png');
             border-radius: 100%;
         }
+        .middle {
+            text-align: center;
+        } m                                                          
     </style>
   </head>
   <body>
+    <div class="middle" id="top">
+        <audio id="music" controls loop autoplay>
+            <source src="music.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
     <noscript>
         <strong>We're sorry but get-pakt-win doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
@@ -31,21 +40,40 @@
     <!-- built files will be auto injected -->
     <script src="trail.js"></script>
     <script src="snowflakes.light.min-4.0.0-active.js"></script>
+    <div class="middle" id="bottom"></div>
     <div>
-        <br/>
-        <iframe src="music.mp3" allow="autoplay" style="display:none" id="iframeAudio">
-        </iframe>
+        <audio id="yesmilord">
+            <source src="yesmilord.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <script>
+            document.addEventListener("scroll", function() {
+              var music = document.getElementById('music');
+              music.play();
+            });
+            document.addEventListener('click', function() {
+              var audio = document.getElementById('yesmilord');
+              audio.play();
+              var music = document.getElementById('music');
+              music.play();
+            }, true);
+			document.getElementById('music').addEventListener("pause", function(){
+              var music = document.getElementById('music');
+              music.play();
+			});
+            document.getElementById('music').addEventListener("mouseover", function(){
+              var music = document.getElementById('music');
+              var fragment = document.createDocumentFragment();
+              if (music.parentElement.id === 'top') {
+                fragment.appendChild(music);
+                document.getElementById('bottom').appendChild(fragment);
+              } else {
+                fragment.appendChild(music);
+                document.getElementById('top').appendChild(fragment);
+              }
+              music.play();
+            });
+        </script>
     </div>
-	<audio id="yesmilord">
-		<source src="yesmilord.mp3" type="audio/mpeg">
-		Your browser does not support the audio element.
-	</audio>
-	<script>
-		const yiss = function() {
-		  var audio = document.getElementById('yesmilord');
-		  audio.play();
-		};
-		document.addEventListener('click', yiss, true);
-	</script>
   </body>
 </html>
