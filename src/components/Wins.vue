@@ -7,30 +7,30 @@
           <th>player</th>
           <th>location</th>
           <th>last time crushed</th>
-		  <th>score</th>
+      <th>score</th>
         </tr>
       </thead>
       <tbody>
-		<tr>
+    <tr>
           <td><img alt="ur mom" src="../assets/urmom.jpg"></td>
           <td>ur mom</td>
           <td>my house</td>
-		  <td>every night</td>
-		  <td>69 - 0</td>
+      <td>every night</td>
+      <td>69 - 0</td>
         </tr>
         <tr v-for="player in paktd" :key="player.id">
           <td><img v-bind:src="player.avatar"></td>
           <td><a v-bind:href="player.profile">{{player.name}}</a></td>
           <td><a v-bind:href="'http://www.google.com/maps/place/'+player.coordinates" target="_blank">{{player.location}}</a></td>
-		  <td>{{new Date(player.date).toLocaleTimeString("en-us", dateOptions)}}</td>
-		  <td>69 - 0</td>
+      <td>{{new Date(player.date).toLocaleTimeString("en-us", dateOptions)}}</td>
+      <td>69 - 0</td>
         </tr>
-		<tr>
+    <tr>
           <td><img alt="ur mom still" src="../assets/urmom.jpg"></td>
           <td>ur mom again!</td>
           <td>youre house now!</td>
-		  <td>back2back</td>
-		  <td>69 - 0</td>
+      <td>back2back</td>
+      <td>69 - 0</td>
         </tr>
       </tbody>
     </table>
@@ -45,9 +45,8 @@ export default {
   data() {
     return {
       paktd: [],
-	  dateOptions: {
-        weekday: "short", year: "numeric", month: "short",
-        day: "numeric", hour: "2-digit"
+      dateOptions: {
+        weekday: 'short', year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit',
       },
     };
   },

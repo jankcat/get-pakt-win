@@ -15,7 +15,7 @@ export default {
 
 <style scoped>
 .scroller {
-  height: 50px;	
+  height: 50px;
   width: 40%;
   margin: 0 auto;
   overflow: hidden;
