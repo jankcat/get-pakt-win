@@ -63,6 +63,7 @@
 			});
             document.getElementById('music').addEventListener("mouseover", function(){
               var music = document.getElementById('music');
+			  if (music.paused) return;
               var fragment = document.createDocumentFragment();
               if (music.parentElement.id === 'top') {
                 fragment.appendChild(music);

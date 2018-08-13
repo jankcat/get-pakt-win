@@ -18,7 +18,7 @@
           <td>every night</td>
           <td>69 - 0</td>
         </tr>
-        <tr v-for="player in paktd" :key="player.id">
+        <tr v-for="player in paktd" :key="`${player.id}-${player.date}`">
           <td><img v-bind:src="player.avatar"></td>
           <td><a v-bind:href="player.profile" target="_blank">{{player.name}}</a></td>
           <td><a v-bind:href="'http://www.google.com/maps/place/'+player.coordinates" target="_blank">{{player.location}}</a></td>

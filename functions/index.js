@@ -76,8 +76,8 @@ app.post('/', async (req, res) => {
     
     console.log(data);
     
-    await db.collection('paktd').doc(id).set(data);
-    res.send(`Inserted win: ${id}`);
+    await db.collection('paktd').add(data);
+    res.send(`Inserted win: ${id} - ${user.nickname}`);
     
   } catch (e) {
     console.error(e);
