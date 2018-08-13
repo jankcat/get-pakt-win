@@ -4,6 +4,9 @@
       <img id="logo" alt="get pakt" src="./assets/logo.png" />
       <div class="bg">
         <Scroller msg="PAK YO BAGS!" />
+        <div class="head-two">
+          {{stats.pakt}} CHUMPS HAVE BEEN PAKT
+        </div>
       </div>
     </div>
     <hr />
@@ -49,12 +52,26 @@ import Wins from './components/Wins.vue';
 import Scroller from './components/Scroller.vue';
 import JpgImg from './components/JpgImg.vue';
 
+import { db } from './main';
+
 export default {
   name: 'app',
   components: {
     Wins,
     Scroller,
     JpgImg,
+  },
+  data() {
+    return {
+      stats: {
+        pakt: 'UNLIMITED',
+      },
+    };
+  },
+  firestore() {
+    return {
+      stats: db.collection('stats').doc('stats'),
+    };
   },
 };
 </script>
@@ -72,6 +89,9 @@ img {
 }
 .bg {
   background-image: url("./assets/bg.jpg");
+}
+.head-two {
+  font-size: 2em;
 }
 .left {
   text-align: left;

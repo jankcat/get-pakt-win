@@ -45,7 +45,7 @@ app.post('/', async (req, res) => {
     if (user.countryCode && locations[user.countryCode]) {
       const country = locations[user.countryCode];
       location.country = country.name;
-      location.coords = country.coordinates;
+      if (country.coordinates) location.coords = country.coordinates;
       if (user.stateCode && country.states && country.states[user.stateCode]) {
         const state = country.states[user.stateCode];
         location.state = state.name;
@@ -78,12 +78,24 @@ app.post('/', async (req, res) => {
     
     await db.collection('paktd').add(data);
     res.send(`Inserted win: ${id} - ${user.nickname}`);
-    
   } catch (e) {
     console.error(e);
-    res.send("Failed!");
+    res.send(`Failed! err: ${e}`);
   }
 });
 
 // turn the express app into a single firebase function called win
 exports.win = functions.https.onRequest(app);
+
+exports.createUser = functions.firestore.document('paktd/{id}').onCreate(async (snap, context) => {
+  try {
+    const statsRef = db.collection('stats').doc('stats');
+    const statsSnap = await statsRef.get();
+    const stats = await statsSnap.data();
+    const count = stats.pakt + 1;
+    console.log(`Updated pakt counter: ${count}`);
+    await statsRef.update({pakt: count});    
+  } catch (e) {
+    console.error(e);
+  }
+});
