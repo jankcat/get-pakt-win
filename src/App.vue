@@ -102,7 +102,7 @@ img {
   background-image: url("./assets/bg.jpg");
 }
 .bg-green {
-  background-image: url("./assets/greenbg.png");
+  background-image: url("./assets/greenbg.jpg");
   color: red;
 }
 .head-three {

@@ -22,7 +22,7 @@ export default {
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
-  background-image: url("../assets/greenbg.png");
+  background-image: url("../assets/greenbg.jpg");
 }
 .scroller span {
   display: inline-block;
