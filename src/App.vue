@@ -10,6 +10,15 @@
       </div>
     </div>
     <hr />
+    <div class="bg">
+      <div class="head-three">
+        {{champ.shoutout}}
+      </div>
+      <div class="head-two">
+        {{champ.tagline}}
+      </div>
+    </div>
+    <hr />
     <div>
       <div class="left">
         <img alt="people who got pakt:" src="./assets/peepz who got pakt.png" />
@@ -66,11 +75,13 @@ export default {
       stats: {
         pakt: 'UNLIMITED',
       },
+      champ: {}
     };
   },
   firestore() {
     return {
       stats: db.collection('stats').doc('stats'),
+      champ: db.collection('stats').doc('champ'),
     };
   },
 };
@@ -89,6 +100,9 @@ img {
 }
 .bg {
   background-image: url("./assets/bg.jpg");
+}
+.head-three {
+  font-size: 3em;
 }
 .head-two {
   font-size: 2em;
