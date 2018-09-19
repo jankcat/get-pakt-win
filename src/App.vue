@@ -10,7 +10,7 @@
       </div>
     </div>
     <hr />
-    <div class="bg">
+    <div class="bg-green">
       <div class="head-three">
         {{champ.shoutout}}
       </div>
@@ -100,6 +100,10 @@ img {
 }
 .bg {
   background-image: url("./assets/bg.jpg");
+}
+.bg-green {
+  background-image: url("./assets/greenbg.png");
+  color: red;
 }
 .head-three {
   font-size: 3em;
